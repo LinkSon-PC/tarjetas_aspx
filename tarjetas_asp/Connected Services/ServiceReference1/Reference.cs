@@ -28,6 +28,13 @@ namespace tarjetas_asp.ServiceReference1 {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/CreditCardInfo", ReplyAction="*")]
         System.Threading.Tasks.Task<tarjetas_asp.ServiceReference1.CreditCardInfoResponse> CreditCardInfoAsync(tarjetas_asp.ServiceReference1.CreditCardInfoRequest request);
+        
+        // CODEGEN: Se está generando un contrato de mensaje, ya que el nombre de elemento xml del espacio de nombres http://tempuri.org/ no está marcado para aceptar valores nil.
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ProcessCreditCard", ReplyAction="*")]
+        tarjetas_asp.ServiceReference1.ProcessCreditCardResponse ProcessCreditCard(tarjetas_asp.ServiceReference1.ProcessCreditCardRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ProcessCreditCard", ReplyAction="*")]
+        System.Threading.Tasks.Task<tarjetas_asp.ServiceReference1.ProcessCreditCardResponse> ProcessCreditCardAsync(tarjetas_asp.ServiceReference1.ProcessCreditCardRequest request);
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -159,6 +166,74 @@ namespace tarjetas_asp.ServiceReference1 {
         }
     }
     
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class ProcessCreditCardRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="ProcessCreditCard", Namespace="http://tempuri.org/", Order=0)]
+        public tarjetas_asp.ServiceReference1.ProcessCreditCardRequestBody Body;
+        
+        public ProcessCreditCardRequest() {
+        }
+        
+        public ProcessCreditCardRequest(tarjetas_asp.ServiceReference1.ProcessCreditCardRequestBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org/")]
+    public partial class ProcessCreditCardRequestBody {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+        public System.Xml.Linq.XElement xml;
+        
+        public ProcessCreditCardRequestBody() {
+        }
+        
+        public ProcessCreditCardRequestBody(System.Xml.Linq.XElement xml) {
+            this.xml = xml;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class ProcessCreditCardResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="ProcessCreditCardResponse", Namespace="http://tempuri.org/", Order=0)]
+        public tarjetas_asp.ServiceReference1.ProcessCreditCardResponseBody Body;
+        
+        public ProcessCreditCardResponse() {
+        }
+        
+        public ProcessCreditCardResponse(tarjetas_asp.ServiceReference1.ProcessCreditCardResponseBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org/")]
+    public partial class ProcessCreditCardResponseBody {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+        public string ProcessCreditCardResult;
+        
+        public ProcessCreditCardResponseBody() {
+        }
+        
+        public ProcessCreditCardResponseBody(string ProcessCreditCardResult) {
+            this.ProcessCreditCardResult = ProcessCreditCardResult;
+        }
+    }
+    
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     public interface tarjetaSoapChannel : tarjetas_asp.ServiceReference1.tarjetaSoap, System.ServiceModel.IClientChannel {
     }
@@ -232,6 +307,31 @@ namespace tarjetas_asp.ServiceReference1 {
             inValue.Body = new tarjetas_asp.ServiceReference1.CreditCardInfoRequestBody();
             inValue.Body.soapRequest = soapRequest;
             return ((tarjetas_asp.ServiceReference1.tarjetaSoap)(this)).CreditCardInfoAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        tarjetas_asp.ServiceReference1.ProcessCreditCardResponse tarjetas_asp.ServiceReference1.tarjetaSoap.ProcessCreditCard(tarjetas_asp.ServiceReference1.ProcessCreditCardRequest request) {
+            return base.Channel.ProcessCreditCard(request);
+        }
+        
+        public string ProcessCreditCard(System.Xml.Linq.XElement xml) {
+            tarjetas_asp.ServiceReference1.ProcessCreditCardRequest inValue = new tarjetas_asp.ServiceReference1.ProcessCreditCardRequest();
+            inValue.Body = new tarjetas_asp.ServiceReference1.ProcessCreditCardRequestBody();
+            inValue.Body.xml = xml;
+            tarjetas_asp.ServiceReference1.ProcessCreditCardResponse retVal = ((tarjetas_asp.ServiceReference1.tarjetaSoap)(this)).ProcessCreditCard(inValue);
+            return retVal.Body.ProcessCreditCardResult;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<tarjetas_asp.ServiceReference1.ProcessCreditCardResponse> tarjetas_asp.ServiceReference1.tarjetaSoap.ProcessCreditCardAsync(tarjetas_asp.ServiceReference1.ProcessCreditCardRequest request) {
+            return base.Channel.ProcessCreditCardAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<tarjetas_asp.ServiceReference1.ProcessCreditCardResponse> ProcessCreditCardAsync(System.Xml.Linq.XElement xml) {
+            tarjetas_asp.ServiceReference1.ProcessCreditCardRequest inValue = new tarjetas_asp.ServiceReference1.ProcessCreditCardRequest();
+            inValue.Body = new tarjetas_asp.ServiceReference1.ProcessCreditCardRequestBody();
+            inValue.Body.xml = xml;
+            return ((tarjetas_asp.ServiceReference1.tarjetaSoap)(this)).ProcessCreditCardAsync(inValue);
         }
     }
 }

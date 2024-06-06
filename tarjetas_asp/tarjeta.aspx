@@ -10,7 +10,13 @@
         <div>
             <asp:Label ID="lblStatus" runat="server" Text=""></asp:Label>
             <br />
-            <asp:Button ID="btnSendXml" runat="server" Text="Enviar Información" OnClick="btnSendXml_Click" />
+            <asp:Button ID="btnSendXml" runat="server" Text="Enviar Información 1" OnClick="ConsumeWebService" />
+
+            <br />
+            
+            <asp:Label ID="lblStatus2" runat="server" Text=""></asp:Label>
+            <br />
+            <asp:Button ID="btnSendXml2" runat="server" Text="Enviar Información 2" OnClick="btnSendXml_Click" />
         </div>
     </form>
 </body>

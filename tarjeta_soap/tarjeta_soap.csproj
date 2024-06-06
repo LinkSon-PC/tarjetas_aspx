@@ -76,6 +76,7 @@
       <DependentUpon>tarjeta.asmx</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="TarjetaDeCredito.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

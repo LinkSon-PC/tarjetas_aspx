@@ -1,9 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Web;
 using System.Web.Services;
 using System.Xml;
+using System.Xml.Serialization;
 
 namespace tarjeta_soap
 {
@@ -47,6 +49,27 @@ namespace tarjeta_soap
             }
         }
 
+        [WebMethod]
+        public string ProcessCreditCard(XmlElement xml)
+        {
+            try
+            {
+                // Deserializar el XML a un objeto Envelope
+                XmlSerializer serializer = new XmlSerializer(typeof(CreditCardInfo));
+                using (StringReader reader = new StringReader(xml.OuterXml))
+                {
+                    CreditCardInfo tarjeta = (CreditCardInfo)serializer.Deserialize(reader);
+
+                    // GUARDAR INFO
+
+                    return "Información de la tarjeta de crédito procesada correctamente.";
+                }
+            }
+            catch (Exception ex)
+            {
+                return $"Error procesando la información de la tarjeta de crédito: {ex.Message}";
+            }
+        }
 
     }
 }
