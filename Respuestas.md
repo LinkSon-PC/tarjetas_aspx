@@ -69,6 +69,8 @@ Credenciales de prueba
 
 #   INCISO 3
 
+![alt text](images/ER_proyecto.png)
+
 A.  Escriba la consulta en SQL que devuelva el nombre del proyecto y sus productos correspondientes del proyecto premia cuyo código es 1.
 
 
