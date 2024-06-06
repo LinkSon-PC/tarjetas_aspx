@@ -23,18 +23,49 @@ Credenciales de prueba
     user: admin
     password: password
 
+![alt text](images/login_aspx.png)
+
 ##  Tarjeta
 
     https://localhost:44396/tarjeta.aspx
 
-
-
+![alt text](images/tarjetas_aspx.png)
 
 #   INCISO 2
 
 [Tarjeta soap](tarjeta_soap)
 
     https://localhost:44351/tarjeta.asmx
+
+![alt text](images/tarjetas_asmx.png)
+
+```xml
+<soapenv:Envelope xmlns:soapenv=""http://schemas.xmlsoap.org/soap/envelope/"" xmlns:cred=""http://example.com/creditcard"">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <cred:CreditCardInfo>
+         <Sistema>
+            <Nombre>Sistema1</Nombre>
+            <Localizacion>Local</Localizacion>
+         </Sistema>
+         <Cliente>
+            <ID>123456789</ID>
+            <Nombre>Juan Pérez</Nombre>
+            <Direccion>Calle Principal 123</Direccion>
+            <Ciudad>Ciudad de Ejemplo</Ciudad>
+            <CodigoPostal>12345</CodigoPostal>
+            <Pais>País de Ejemplo</Pais>
+         </Cliente>
+         <Tarjeta>
+            <Numero>1234567890123456</Numero>
+            <Tipo>Visa</Tipo>
+            <FechaExpiracion>12/24</FechaExpiracion>
+            <CVV>123</CVV>
+         </Tarjeta>
+      </cred:CreditCardInfo>
+   </soapenv:Body>
+</soapenv:Envelope>
+```
 
 #   INCISO 3
 

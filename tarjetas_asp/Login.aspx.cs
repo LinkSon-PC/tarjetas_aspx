@@ -11,6 +11,10 @@ namespace tarjetas_asp
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (!IsPostBack)
+            {
+                // Puedes realizar alguna inicialización si es necesario
+            }
 
         }
         protected void btnLogin_Click(object sender, EventArgs e)
@@ -30,6 +34,8 @@ namespace tarjetas_asp
             if (username == "admin" && password == "password")
             {
                 Response.Write("<script>alert('Login exitoso');</script>");
+                // Si las credenciales son correctas, redireccionar a la página de inicio o realizar alguna acción
+                Response.Redirect("tarjeta.aspx");
             }
             else
             {
