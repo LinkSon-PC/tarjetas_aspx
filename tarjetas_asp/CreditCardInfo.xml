@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<CreditCardExchange>
+  <System>
+    <Name>Sistema A</Name>
+    <Location>USA</Location>
+    <CardInfo>
+      <CardNumber>1234567890123456</CardNumber>
+      <UniqueClientID>ABC123</UniqueClientID>
+      <CardHolderName>John Doe</CardHolderName>
+      <ExpirationDate>12/2025</ExpirationDate>
+    </CardInfo>
+  </System>
+  <System>
+    <Name>Sistema B</Name>
+    <Location>Canada</Location>
+    <CardInfo>
+      <CardNumber>9876543210987654</CardNumber>
+      <UniqueClientID>XYZ789</UniqueClientID>
+      <CardHolderName>Jane Smith</CardHolderName>
+      <ExpirationDate>11/2024</ExpirationDate>
+    </CardInfo>
+  </System>
+</CreditCardExchange>
