@@ -2,6 +2,8 @@
 
 - [RESPUESTAS](#respuestas)
 - [INCISO 1](#inciso-1)
+  - [Login](#login)
+  - [Tarjeta](#tarjeta)
 - [INCISO 2](#inciso-2)
 - [INCISO 3](#inciso-3)
 - [INCISO 4](#inciso-4)
@@ -10,7 +12,29 @@
 
 #   INCISO 1
 
+[Login y Tarjeta aspx](tarjetas_asp)
+
+##  Login
+
+    https://localhost:44396/login.aspx
+
+Credenciales de prueba
+
+    user: admin
+    password: password
+
+##  Tarjeta
+
+    https://localhost:44396/tarjeta.aspx
+
+
+
+
 #   INCISO 2
+
+[Tarjeta soap](tarjeta_soap)
+
+    https://localhost:44351/tarjeta.asmx
 
 #   INCISO 3
 
